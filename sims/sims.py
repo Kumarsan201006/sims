@@ -1396,7 +1396,8 @@ class SIMSReader(object):
         """
         if (not date or
             not isinstance(date, str) or
-            'N/A' in date):
+            'N/A' or
+            'None' in date):
                 return None
 
         date, time = date.split()
